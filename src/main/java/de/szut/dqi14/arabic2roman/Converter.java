@@ -10,12 +10,22 @@ public class Converter {
                 (a, b) -> Integer.compare(b, a)
         );
         romanMap.put(1, "I");
+        romanMap.put(2, "II");
         romanMap.put(4, "IV");
         romanMap.put(5, "V");
         romanMap.put(9, "IX");
         romanMap.put(10, "X");
         romanMap.put(20, "XX");
         romanMap.put(40, "XL");
+        romanMap.put(50, "L");
+        romanMap.put(90, "XC");
+        romanMap.put(100, "C");
+        romanMap.put(200, "CC");
+        romanMap.put(400, "CD");
+        romanMap.put(500, "D");
+        romanMap.put(900, "CM");
+        romanMap.put(1000, "M");
+        romanMap.put(2000, "MM");
     }
 
     public String convert(int i) {
@@ -28,9 +38,6 @@ public class Converter {
             }
         }
 
-        for( ; i > 0; i-- ) {
-            stringBuilder.append("I");
-        }
         return stringBuilder.toString();
     }
 }
